@@ -14,8 +14,8 @@ app.use(bodyParser.json());
  //adds a middleware where HTTP requests in JSON are parsed as req.body
 app.use(bodyParser.urlencoded({ extended: false }));
 // adds a midleware where URL-enocded payload from the form are parsed as req.body & does not parse object datatypes
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname)));
  // Serve static files from 'public' folder so that the browser can acess all files within this directory
  app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'views','desktop', 'en','index.html'));
+    res.sendFile(path.join(__dirname,'index.html'));
 });
