@@ -36,7 +36,7 @@ h2 {
   color: #221c43;
   text-align: left;
   font-family: "Gotham-Bold", sans-serif;
-  font-size: 40px;
+  font-size: 24px;
   line-height: 72px;
   font-weight: 700;
   position: relative;
@@ -45,7 +45,7 @@ h3{
   color: #221c43;
   text-align: left;
   font-family: "NotoSansJp-Medium", sans-serif;
-  font-size: 32px;
+  font-size: 18px;
   line-height: 48px;
   font-weight: 500;
   position: relative;
@@ -54,7 +54,7 @@ h3{
   color: #221c43;
   text-align: left;
   font-family: "NotoSansJp-Regular", sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
   position: relative;
 }
@@ -62,7 +62,7 @@ p{
   color: #221c43;
   text-align: left;
   font-family: "NotoSansJp-Regular", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 34px;
   font-weight: 400;
   position: relative;
@@ -71,7 +71,7 @@ p{
   color: #221c43;
   text-align: left;
   font-family: "NotoSansJp-Regular", sans-serif;
-  font-size: 20px;
+  font-size: 10px;
   line-height: 24px;
   font-weight: 400;
   position: relative;
@@ -139,6 +139,9 @@ p{
   text-decoration: underline;
   border: 1px solid transparent;
   padding: 16px;
+  color: #221c43;
+  text-align: left;
+  font-family: "NotoSansJp-Medium", sans-serif;
 }
 .button-link:hover {
   border: #221c43 1px solid;
