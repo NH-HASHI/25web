@@ -145,3 +145,8 @@ p{
   border: #221c43 1px solid;
   border-radius: 40px;
 }
+.email {
+  color: #221c43; /* Customize the color to match your design */
+  font-weight: bold; /* Make the email stand out */
+  text-decoration: underline; /* Underline to indicate it's a link */
+}
