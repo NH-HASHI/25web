@@ -75,12 +75,6 @@
     background: #fcf4f4;
   }
   
-  .shrink-answer {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  
   .shrink-answer-text {
     color: #221c43;
     font-size: 16px;

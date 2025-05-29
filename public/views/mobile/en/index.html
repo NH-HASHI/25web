@@ -1,20 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matsuri2025</title>
+
     <script>
-        function loadMobileVersion() {
-          if (window.innerWidth > 600) {
-            window.location.href = '/';
-          }
+      let menuOpen = false;
+
+      function toggleMenu() {
+        const icon = document.getElementById("menuIcon");
+        const menu = document.getElementById("mobileMenu");
+        const toggle = document.getElementById("menuToggle");
+
+        menuOpen = !menuOpen;
+
+        if (menuOpen) {
+          icon.src = "/public/images/icons/cross.svg";
+          toggle.classList.add("active");
+          menu.classList.remove("hidden");
+          toggle.classList.add("menu-open");
+        } else {
+          icon.src = "/public/images/icons/3lines.svg";
+          toggle.classList.remove("active");
+          menu.classList.add("hidden");
+          toggle.classList.remove("menu-open");
         }
-        window.addEventListener('resize', loadMobileVersion);
-        // Could I Deal woith this on the server Side?
-    </script>    
-</head>
-<body>
-    THIS IS THE MOBILE WEBSITE
-</body>
+      }
+      function toggleSubmenu(id) {
+        document.getElementById(id).classList.toggle("hidden");
+      }
+
+      /*function loadMobileVersion() {
+      if (window.innerWidth >= 1700) {
+        window.location.href = '/';
+      }
+    }*/
+      window.addEventListener("resize", loadMobileVersion);
+    </script>
+
+    <script src="/public/scripts/shrink.js"></script>
+    <link rel="icon" href="public/images/Logo-azul.png" type="image/png" />
+    <link rel="stylesheet" href="/public/styles/mobile/menu-drop.css" />
+    <link rel="stylesheet" href="/public/styles/mobile/mobile-footer.css" />
+    <link rel="stylesheet" href="/public/styles/mobile/mobile-recurring.css" />
+  </head>
+
+  <body>
+    <header class="mobile-header">
+      <div class="header-top">
+        <img src="/public/images/Logo.png" alt="Matsuri Logo" class="logo" />
+        <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+          Menu
+          <img
+            id="menuIcon"
+            src="/public/images/icons/3lines.svg"
+            alt="Menu Icon"
+            class="menu-icon"
+          />
+        </div>
+      </div>
+
+      <nav class="mobile-menu hidden" id="mobileMenu">
+        <ul>
+          <li class="section-header">
+            <button
+              class="submenu-toggle"
+              onclick="toggleSubmenu('activities')"
+            >
+              Activities 2025
+              <img src="/public/images/icons/down-arrow.svg" alt="" />
+            </button>
+            <ul class="submenu hidden" id="activities">
+              <li>Program 2025</li>
+              <li>The Performers</li>
+              <li>The Booths</li>
+              <li>Kid's Activities</li>
+              <li>Food Experience</li>
+            </ul>
+          </li>
+          <li>About</li>
+          <li>Getting there</li>
+          <li>Contact us</li>
+          <li class="highlight">
+            <button class="submenu-toggle" onclick="toggleSubmenu('support')">
+              Support us
+              <img src="/public/images/icons/down-arrow.svg" alt="" />
+            </button>
+            <ul class="submenu hidden" id="support">
+              <li>Volunteering</li>
+              <li>Crowdfunding</li>
+              <li>Sponsors</li>
+            </ul>
+          </li>
+          <li id="ticket-link">
+            <a href=""> Get Your Ticket </a>
+          </li>
+        </ul>
+
+        <div class="language-selector">
+          <button>ENGLISH</button>
+          <button>CASTELLANO</button>
+          <button>日本語</button>
+        </div>
+      </nav>
+    </header>
+    <div class="divider"></div>
+    <div class="footer">
+      <div class="footer-top">
+        <img src="/public/images/Logo.png" alt="Matsuri Logo" class="logo" />
+        <a class="button-circular" href="google.com ">
+          <div class="button-content">
+            <div class="button-text" style="font-weight: 800">
+              Buy Your Tickets Now
+            </div>
+            <imgclass
+              ="rightArrow"
+              src="/public/images/icons/right-arrow.svg"
+            />
+          </div>
+        </a>
+        <div class="sns-icon">
+          <a href="https://www.instagram.com/matsuribarcelona/">
+            <img src="/public/images/icons/insta.svg" alt="" />
+          </a>
+          <a href="https://www.youtube.com/@MATSURI-Barcelona/videos">
+            <img src="/public/images/icons/youtube.svg" alt="" />
+          </a>
+          <a href="https://www.facebook.com/matsurijapaninbarcelona">
+            <img src="/public/images/icons/facebook.svg" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="footer-middle">
+        <div class="footer-columns">
+          <div class="footer-content">
+            <div class="big-paragraph">Activities 2025</div>
+            <div class="sub-activities-frame">
+              <a href="#" class="sub-activities-content">Program 2025</a>
+              <a href="#" class="sub-activities-content">The Performers</a>
+              <a href="#" class="sub-activities-content">Kids Activties</a>
+              <a href="#" class="sub-activities-content">Booths</a>
+              <a href="#" class="sub-activities-content">Food Experience</a>
+              <a href="#" class="sub-activities-content">Artists</a>
+            </div>
+            <br /><br />
+            <div class="sub-activities-frame">
+              <a href="#" class="sub-activities-content">About</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-columns">
+          <div class="footer-content">
+            <div class="big-paragraph">Support Us</div>
+            <div class="sub-activities-frame">
+              <a
+                href="/public/views/desktop/en/volunteer.html"
+                class="sub-activities-content"
+                >Volunteering</a
+              >
+              <a href="#" class="sub-activities-content">Crowdfunding</a>
+              <a href="#" class="sub-activities-content">Sponsorships</a>
+            </div>
+            <br /><a href="#" class="sub-activities-content">Getting there</a>
+            <br /><a href="#" class="sub-activities-content">Contact Us</a>
+            <br />
+            <div class="sub-activities-frame">
+              <a href="#" class="sub-activities-content">Privacy Policy</a>
+              <a href="#" class="sub-activities-content">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="lower-footer">
+        <div class="footer-row">
+          <img src="/public/images/bcn-logo/bcn-blue1.png" alt="" />
+          <p class="name-holder">Designed by <span class="name">Elly</span></p>
+          <img src="/public/images/bcn-logo/bcn-blue2.png" alt="" />
+        </div>
+
+        <div class="footer-row">
+          <img src="/public/images/bcn-logo/bcn-blue3.png" alt="" />
+          <p class="name-holder">
+            Built by <span class="name">Naoki & Austin</span>
+          </p>
+          <img src="/public/images/bcn-logo/bcn-blue4.png" alt="" />
+        </div>
+
+        <h1 class="footer-heading">MATSURI 2025</h1>
+      </div>
+    </div>
+  </body>
 </html>
