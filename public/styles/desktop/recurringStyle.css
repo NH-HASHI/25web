@@ -29,7 +29,9 @@ h1 {
   font-family: "NotoSansJp-Regular", sans-serif;
   font-size: 64px;
   font-weight: 700;
-  position: relative;
+  position: relative;/* Ensure enough vertical spacing */            /* Add vertical space */
+  display: block;            /* Ensures it stacks */
+  word-break: normal; 
 }
 h2 {
   color: #221c43;

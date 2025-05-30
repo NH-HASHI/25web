@@ -10,6 +10,7 @@
 }
 
 /* Row container: all columns in one horizontal line */
+
 .footer-main {
   display: flex;
   flex-direction: row;
@@ -117,6 +118,7 @@
   margin: 0 auto;
 }
 
+
 .lower-footer-content {
   display: flex;
   flex-direction: row;
@@ -125,7 +127,7 @@
   flex-wrap: wrap;
   flex-shrink: 0;
   margin: 30px;
-  gap: 36px;
+  gap: 32px;
   position: relative;
 }
 .name {
@@ -136,4 +138,32 @@
   width: auto; /* Let it size naturally */
   text-align: center; /* Center the content */
   margin: 0 auto; /* Center the block itself if needed */
+}
+@media (max-width: 992px) {
+  .footer-main {
+    flex-wrap: wrap; /* Allow columns to wrap if space is limited */
+  }
+
+  .footer-columns.poster-column {
+    display: none; /* Hide the poster column first */
+  }
+
+  .footer-logo-c1, .footer-columns {
+    flex: 1 1 100%; /* Stack remaining columns vertically */
+    max-width: 100%;
+  }
+
+  .footer-logo-c1 {
+    padding: 40px 20px; /* Reduce padding for smaller screens */
+    align-items: center;
+  }
+
+  .footer-content {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .sns-icon {
+    justify-content: center;
+  }
 }
