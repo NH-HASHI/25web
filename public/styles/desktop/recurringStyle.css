@@ -31,7 +31,7 @@ h1 {
   font-weight: 700;
   position: relative;/* Ensure enough vertical spacing */            /* Add vertical space */
   display: block;            /* Ensures it stacks */
-  word-break: normal; 
+
 }
 h2 {
   color: #221c43;
