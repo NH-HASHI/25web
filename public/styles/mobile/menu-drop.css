@@ -50,6 +50,15 @@
   margin: 0;
 }
 
+a {
+  color: inherit;         /* Inherit text color from parent */
+  text-decoration: none;  /* Optional: remove underline */
+}
+
+a:visited {
+  color: inherit;         /* Prevents purple color after visit */
+}
+
 /* === Top-Level Menu Items === */
 #mobileMenu > ul > li {
   color: #221c43;
@@ -105,8 +114,8 @@
   margin-top: 1rem;
 }
 
-.language-selector button {
-  border: 1px solid #d44;
+.language-selector a {
+  border: 1px solid #221c43;
   border-radius: 20px;
   background: #fff;
   padding: 0.5rem 1rem;
