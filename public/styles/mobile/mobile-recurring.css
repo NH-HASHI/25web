@@ -30,6 +30,7 @@ h1 {
   font-family: "NotoSansJp-Regular", sans-serif;
   font-size: 32px;
   font-weight: 700;
+  text-align: center;
   position: relative;
 }
 h2 {
@@ -37,16 +38,17 @@ h2 {
   text-align: left;
   font-family: "Gotham-Bold", sans-serif;
   font-size: 24px;
-  line-height: 72px;
+  line-height: 30px;
   font-weight: 700;
   position: relative;
+  text-align: center;
 }
 h3{
   color: #221c43;
   text-align: left;
   font-family: "NotoSansJp-Medium", sans-serif;
   font-size: 18px;
-  line-height: 48px;
+  line-height: 24px;
   font-weight: 500;
   position: relative;
 }
