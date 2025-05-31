@@ -182,7 +182,6 @@ th {
   color: #221c43;
   line-height: 1.2;
   margin: 0;
-  background-color: rgba(150, 230, 150, 0.4); /* Optional visual highlight */
   display: inline-block;
 }
 
