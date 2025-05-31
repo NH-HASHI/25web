@@ -1,0 +1,9 @@
+.page-header-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  background-color: #eaeaf4;
+  border: 1px solid #221c43;
+  margin: 40px 32px;
+  padding: 24px 32px;
+}
